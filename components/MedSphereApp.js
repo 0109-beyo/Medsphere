@@ -115,6 +115,96 @@ const SUBJECTS = [
           },
         ],
       },
+      {
+        id: "a3",
+        title: "Lower Limb",
+        topics: [
+          {
+            id: "hip-joint",
+            name: "Hip Joint",
+            completed: false,
+            simple: "The hip is a deep, stable ball-and-socket joint that supports body weight while still allowing a wide range of leg movement.",
+            detailed: "The hip joint sits between the femoral head and the acetabulum of the pelvis. Unlike the shallow shoulder socket, the acetabulum is deep and further deepened by the acetabular labrum, giving the hip much greater inherent bony stability than the shoulder — at the cost of somewhat reduced mobility. Strong ligaments (iliofemoral, pubofemoral, ischiofemoral) reinforce the capsule, and the blood supply to the femoral head runs largely through vessels vulnerable to disruption in fracture.",
+            points: [
+              "Type: synovial ball-and-socket joint, much deeper socket than the shoulder",
+              "Acetabular labrum deepens the socket and improves stability",
+              "Reinforced by the iliofemoral, pubofemoral, and ischiofemoral ligaments",
+              "Blood supply to the femoral head is vulnerable in femoral neck fractures",
+            ],
+            clinical: "Femoral neck fractures can disrupt the retinacular blood supply to the femoral head, risking avascular necrosis — a key reason elderly patients with these fractures often need joint replacement rather than simple fixation.",
+            mnemonic: "The hip trades mobility for stability compared to the shoulder — deep socket, strong ligaments, fewer dislocations.",
+            terms: [
+              { term: "Acetabulum", def: "The deep socket in the pelvis that receives the femoral head." },
+              { term: "Avascular necrosis", def: "Bone death from disrupted blood supply, a risk after femoral neck fracture." },
+            ],
+          },
+          {
+            id: "femoral-sciatic-nerves",
+            name: "Femoral & Sciatic Nerves",
+            completed: false,
+            simple: "The femoral and sciatic nerves are the two major nerves that control movement and sensation in the leg.",
+            detailed: "The femoral nerve arises from the lumbar plexus (L2–L4) and supplies the anterior thigh muscles (knee extension) along with sensation over the anterior thigh and medial leg. The sciatic nerve, the largest nerve in the body, arises from the lumbosacral plexus (L4–S3), runs down the posterior thigh, and splits into the tibial and common fibular (peroneal) nerves near the knee, supplying most of the leg and foot.",
+            points: [
+              "Femoral nerve: L2–L4, supplies the quadriceps (knee extension)",
+              "Sciatic nerve: L4–S3, the largest nerve in the body",
+              "Sciatic nerve splits into tibial and common fibular nerves near the popliteal fossa",
+              "Common fibular nerve injury causes foot drop",
+            ],
+            clinical: "Common fibular (peroneal) nerve injury, often from trauma near the fibular neck, causes foot drop due to loss of ankle dorsiflexion. Sciatica describes pain radiating along the sciatic nerve distribution, often from lumbar disc herniation.",
+            terms: [
+              { term: "Foot drop", def: "Inability to dorsiflex the foot, classically from common fibular nerve injury." },
+              { term: "Sciatica", def: "Pain radiating along the sciatic nerve, often due to nerve root compression." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "a4",
+        title: "Back",
+        topics: [
+          {
+            id: "vertebral-column",
+            name: "Vertebral Column",
+            completed: false,
+            simple: "The vertebral column is the stacked chain of bones that supports the trunk, protects the spinal cord, and gives the back its curves.",
+            detailed: "The vertebral column consists of 33 vertebrae grouped into cervical (7), thoracic (12), lumbar (5), sacral (5, fused into the sacrum), and coccygeal (4, fused into the coccyx) regions. It has four curvatures — cervical and lumbar lordosis (concave posteriorly) and thoracic and sacral kyphosis (convex posteriorly) — which develop through infancy and help absorb mechanical load. Between adjacent vertebral bodies, intervertebral discs (an outer annulus fibrosus and inner nucleus pulposus) act as shock absorbers and allow flexibility.",
+            points: [
+              "Regions: cervical (7), thoracic (12), lumbar (5), sacral (5 fused), coccygeal (4 fused)",
+              "Curvatures: cervical and lumbar lordosis, thoracic and sacral kyphosis",
+              "Intervertebral discs: outer annulus fibrosus, inner nucleus pulposus",
+              "The vertebral canal, formed by successive vertebral foramina, houses the spinal cord",
+            ],
+            clinical: "A herniated disc occurs when the nucleus pulposus pushes through a weakened annulus fibrosus, often compressing a nearby spinal nerve root — most common at L4-L5 and L5-S1 due to the high mechanical load on the lumbar spine.",
+            mnemonic: "'Breakfast, Lunch, and Dinner, Snack after Supper' — Cervical (7), Thoracic (12), Lumbar (5), Sacral (5), Coccygeal (4).",
+            terms: [
+              { term: "Lordosis", def: "An inward (concave) curvature of the spine, normal in the cervical and lumbar regions." },
+              { term: "Kyphosis", def: "An outward (convex) curvature of the spine, normal in the thoracic and sacral regions." },
+              { term: "Annulus fibrosus", def: "The tough outer ring of an intervertebral disc." },
+            ],
+          },
+          {
+            id: "spinal-cord-meninges",
+            name: "Spinal Cord & Meninges",
+            completed: false,
+            simple: "The spinal cord runs through the vertebral canal, wrapped in three protective layers, and ends higher up than most people expect.",
+            detailed: "The spinal cord is surrounded by three meningeal layers — dura mater (outermost, tough), arachnoid mater (middle), and pia mater (innermost, adherent to the cord) — with cerebrospinal fluid filling the subarachnoid space between arachnoid and pia. In adults, the spinal cord itself ends around vertebral level L1-L2 (the conus medullaris), well above the end of the vertebral canal, so the dural sac and subarachnoid space continue down to around S2, filled below the cord's end with the cauda equina — a bundle of lumbar and sacral nerve roots.",
+            points: [
+              "Meningeal layers (outer to inner): dura mater, arachnoid mater, pia mater",
+              "Cerebrospinal fluid fills the subarachnoid space, between arachnoid and pia",
+              "Spinal cord ends at the conus medullaris, around vertebral level L1-L2 in adults",
+              "Cauda equina: bundle of nerve roots below the conus medullaris",
+              "Dural sac extends to about S2, well below where the cord itself ends",
+            ],
+            clinical: "Because the spinal cord ends around L1-L2, a lumbar puncture is safely performed lower, typically at the L3-L4 or L4-L5 interspace, avoiding injury to the cord while still accessing CSF in the subarachnoid space.",
+            mnemonic: "The cord ends around L1-L2; needles go in around L3-L4 — well below the cord, safely among the cauda equina.",
+            terms: [
+              { term: "Conus medullaris", def: "The tapered, terminal end of the spinal cord, around vertebral level L1-L2." },
+              { term: "Cauda equina", def: "The bundle of nerve roots below the conus medullaris, resembling a horse's tail." },
+              { term: "Lumbar puncture", def: "A procedure to sample CSF from the subarachnoid space, performed below the level of the spinal cord." },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
@@ -215,6 +305,51 @@ const SUBJECTS = [
           },
         ],
       },
+      {
+        id: "p3",
+        title: "Blood Physiology",
+        topics: [
+          {
+            id: "hemostasis-coagulation",
+            name: "Hemostasis & Coagulation",
+            completed: false,
+            simple: "Hemostasis is the body's process for stopping bleeding — first by plugging the injury with platelets, then reinforcing it with a fibrin clot.",
+            detailed: "Hemostasis has three overlapping stages: vascular spasm (immediate vessel constriction), primary hemostasis (platelets adhere to exposed collagen via von Willebrand factor and aggregate to form a platelet plug), and secondary hemostasis (the coagulation cascade converts fibrinogen to fibrin, stabilizing the clot). The cascade has intrinsic and extrinsic pathways that converge on a common pathway activating thrombin, which converts fibrinogen to fibrin.",
+            points: [
+              "Vascular spasm: immediate vessel constriction to reduce blood flow",
+              "Primary hemostasis: platelet adhesion (via von Willebrand factor) and aggregation",
+              "Secondary hemostasis: coagulation cascade produces fibrin to stabilize the clot",
+              "Intrinsic and extrinsic pathways converge on the common pathway, activating thrombin",
+            ],
+            clinical: "Hemophilia A results from a deficiency of factor VIII, impairing the intrinsic pathway and causing prolonged bleeding, especially into joints. Warfarin inhibits vitamin K-dependent clotting factors and is monitored using the INR (a standardized measure of the prothrombin time).",
+            mnemonic: "Primary hemostasis = platelet plug. Secondary hemostasis = fibrin reinforcement.",
+            terms: [
+              { term: "Von Willebrand factor", def: "Protein that helps platelets adhere to damaged vessel walls." },
+              { term: "Fibrin", def: "The protein mesh that stabilizes a blood clot, formed from fibrinogen." },
+              { term: "INR", def: "International Normalized Ratio — standardized measure used to monitor warfarin therapy." },
+            ],
+          },
+          {
+            id: "blood-groups-transfusion",
+            name: "Blood Groups & Transfusion",
+            completed: false,
+            simple: "Blood type depends on markers (antigens) on red blood cells, and mismatched transfusions can trigger a dangerous immune reaction.",
+            detailed: "The ABO system classifies blood by A and B antigens on red cells, with corresponding antibodies in the plasma against whichever antigen is absent. Type O has neither antigen (universal donor for red cells), while type AB has both (universal recipient). The Rh system adds another antigen (D); Rh-negative individuals can develop anti-D antibodies if exposed to Rh-positive blood, which matters especially in pregnancy (hemolytic disease of the newborn).",
+            points: [
+              "Type A: A antigen, anti-B antibodies",
+              "Type B: B antigen, anti-A antibodies",
+              "Type AB: both antigens, no antibodies against A or B — universal plasma recipient",
+              "Type O: no antigens, both antibodies — universal red cell donor",
+              "Rh-negative mothers can form anti-D antibodies against an Rh-positive fetus",
+            ],
+            clinical: "Rh incompatibility between an Rh-negative mother and Rh-positive fetus can cause hemolytic disease of the newborn in subsequent pregnancies; this is prevented with Rh immunoglobulin (RhoGAM) given to the mother.",
+            terms: [
+              { term: "Antigen", def: "A marker on the red cell surface that determines blood type." },
+              { term: "Hemolytic disease of the newborn", def: "Destruction of fetal red cells due to maternal antibodies, classically from Rh incompatibility." },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
@@ -226,6 +361,49 @@ const SUBJECTS = [
     totalChapters: 21,
     progress: 21,
     chapters: [
+      {
+        id: "b0",
+        title: "Foundations of Biochemistry",
+        topics: [
+          {
+            id: "chemical-basis-of-life",
+            name: "Chemical Basis of Life",
+            completed: false,
+            simple: "Living things are built from a small set of chemical building blocks — water, carbohydrates, lipids, proteins, and nucleic acids — organized into cells.",
+            detailed: "Biochemistry rests on the properties of water (a polar solvent enabling most biological reactions), and four major classes of biomolecules: carbohydrates (energy and structure), lipids (energy storage and membranes), proteins (structure and function via enzymes), and nucleic acids (information storage and transfer). Weak, reversible bonds — hydrogen bonds, ionic interactions, van der Waals forces — allow biomolecules to fold and interact dynamically, which is essential for processes like enzyme binding and DNA base pairing.",
+            points: [
+              "Water's polarity makes it an excellent solvent for biological reactions",
+              "Four major biomolecule classes: carbohydrates, lipids, proteins, nucleic acids",
+              "Proteins are built from amino acids linked by peptide bonds",
+              "Weak, reversible bonds (hydrogen bonds, van der Waals) allow dynamic molecular interactions",
+              "pH and buffers keep the body's internal chemistry within a narrow functional range",
+            ],
+            clinical: "Small changes in blood pH can be life-threatening — the body uses buffer systems (like bicarbonate) to keep pH tightly controlled around 7.4, and conditions like diabetic ketoacidosis or respiratory failure can overwhelm these buffers.",
+            terms: [
+              { term: "Buffer", def: "A system that resists changes in pH by absorbing excess acid or base." },
+              { term: "Peptide bond", def: "The covalent bond linking amino acids together to form proteins." },
+            ],
+          },
+          {
+            id: "biochem-in-medicine",
+            name: "Biochemistry in Medicine",
+            completed: false,
+            simple: "Biochemistry underlies how diseases develop and how most drugs and lab tests work, making it a foundation for clinical medicine.",
+            detailed: "Many diseases are, at their core, biochemical problems — a missing enzyme, an accumulating toxic metabolite, or a disrupted signaling pathway. Diagnostic medicine relies heavily on biochemical markers (blood glucose, liver enzymes, cholesterol panels), and most drugs work by targeting specific biochemical pathways — inhibiting an enzyme, blocking a receptor, or altering a metabolic process. Understanding normal biochemistry is what makes it possible to recognize what's going wrong in disease.",
+            points: [
+              "Inborn errors of metabolism result from missing or defective enzymes",
+              "Common lab tests (glucose, lipid panel, liver enzymes) are direct biochemical measurements",
+              "Most drugs act by targeting a specific biochemical pathway or molecule",
+              "Biochemistry connects molecular-level changes to whole-body disease symptoms",
+            ],
+            clinical: "Statins lower cholesterol by inhibiting HMG-CoA reductase, the rate-limiting enzyme in cholesterol synthesis — a classic example of a drug designed around a specific biochemical target.",
+            terms: [
+              { term: "Inborn error of metabolism", def: "A genetic condition caused by a missing or defective enzyme in a metabolic pathway." },
+              { term: "HMG-CoA reductase", def: "The rate-limiting enzyme in cholesterol synthesis, targeted by statin drugs." },
+            ],
+          },
+        ],
+      },
       {
         id: "b1",
         title: "Carbohydrate Metabolism",
