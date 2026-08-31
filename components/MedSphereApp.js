@@ -31,6 +31,7 @@ const SUBJECTS = [
         topics: [
           {
             id: "brachial-plexus",
+            funFact: "The brachial plexus can be numbed with a single injection (a 'brachial plexus block'), allowing an entire arm surgery without general anesthesia.",
             name: "Brachial Plexus",
             completed: true,
             simple: "The brachial plexus is the network of nerves that carries movement and sensation signals from the spinal cord to the entire arm.",
@@ -52,6 +53,7 @@ const SUBJECTS = [
           },
           {
             id: "shoulder-joint",
+            funFact: "The shoulder can dislocate in almost any direction — the trade-off for having the largest range of motion of any joint in the body.",
             name: "Shoulder Joint",
             completed: true,
             simple: "The shoulder is a ball-and-socket joint built for a huge range of motion, held together mostly by muscles rather than bone.",
@@ -77,6 +79,7 @@ const SUBJECTS = [
         topics: [
           {
             id: "heart-chambers-valves",
+            funFact: "Heart valve leaflets have no blood vessels of their own — they get oxygen and nutrients directly from the blood flowing past them.",
             name: "Heart Chambers & Valves",
             completed: false,
             simple: "The heart has four chambers and four valves that keep blood flowing in one direction.",
@@ -97,6 +100,7 @@ const SUBJECTS = [
           },
           {
             id: "great-vessels",
+            funFact: "The aorta, the body's largest artery, is roughly the width of a garden hose where it exits the heart.",
             name: "Great Vessels",
             completed: false,
             simple: "The great vessels are the large arteries and veins that connect directly to the heart.",
@@ -121,6 +125,7 @@ const SUBJECTS = [
         topics: [
           {
             id: "hip-joint",
+            funFact: "During running, the hip joint can bear forces several times a person's entire body weight with every stride.",
             name: "Hip Joint",
             completed: false,
             simple: "The hip is a deep, stable ball-and-socket joint that supports body weight while still allowing a wide range of leg movement.",
@@ -140,6 +145,7 @@ const SUBJECTS = [
           },
           {
             id: "femoral-sciatic-nerves",
+            funFact: "The sciatic nerve is roughly as thick as a thumb — it's the widest single nerve in the human body.",
             name: "Femoral & Sciatic Nerves",
             completed: false,
             simple: "The femoral and sciatic nerves are the two major nerves that control movement and sensation in the leg.",
@@ -164,6 +170,7 @@ const SUBJECTS = [
         topics: [
           {
             id: "vertebral-column",
+            funFact: "Humans are born with 33 vertebrae, but by adulthood we effectively have 26 movable bones, since the sacral and coccygeal vertebrae fuse together.",
             name: "Vertebral Column",
             completed: false,
             simple: "The vertebral column is the stacked chain of bones that supports the trunk, protects the spinal cord, and gives the back its curves.",
@@ -184,6 +191,7 @@ const SUBJECTS = [
           },
           {
             id: "spinal-cord-meninges",
+            funFact: "Despite popular belief, the spinal cord doesn't run the full length of the spine — in adults it ends around the first or second lumbar vertebra.",
             name: "Spinal Cord & Meninges",
             completed: false,
             simple: "The spinal cord runs through the vertebral canal, wrapped in three protective layers, and ends higher up than most people expect.",
@@ -222,6 +230,7 @@ const SUBJECTS = [
         topics: [
           {
             id: "cardiac-cycle",
+            funFact: "A resting heart beats about 100,000 times a day — roughly 35 million times a year — without ever truly resting the way skeletal muscle does.",
             name: "Cardiac Cycle & Heart Sounds",
             completed: true,
             simple: "The cardiac cycle is one full heartbeat — the heart filling with blood, then squeezing it out, over and over.",
@@ -243,6 +252,7 @@ const SUBJECTS = [
           },
           {
             id: "cardiac-output",
+            funFact: "At rest, the heart pumps roughly 5 liters of blood per minute — close to a person's entire blood volume — every single minute.",
             name: "Cardiac Output & Regulation",
             completed: false,
             simple: "Cardiac output is how much blood the heart pumps each minute — it depends on heart rate and how much blood is pumped per beat.",
@@ -269,6 +279,7 @@ const SUBJECTS = [
         topics: [
           {
             id: "glomerular-filtration",
+            funFact: "The kidneys filter the body's entire blood volume roughly 40 to 60 times every day, even though daily urine output is only about 1 to 2 liters.",
             name: "Glomerular Filtration",
             completed: false,
             simple: "The kidneys filter blood through tiny sieves called glomeruli, producing the fluid that will become urine.",
@@ -287,6 +298,7 @@ const SUBJECTS = [
           },
           {
             id: "renal-tubular-transport",
+            funFact: "About 99% of the fluid the kidneys filter each day is reabsorbed back into the blood — only a tiny fraction actually becomes urine.",
             name: "Renal Tubular Transport",
             completed: false,
             simple: "After filtration, the kidney tubules reabsorb what the body needs and secrete what it doesn't, fine-tuning the final urine.",
@@ -311,6 +323,7 @@ const SUBJECTS = [
         topics: [
           {
             id: "hemostasis-coagulation",
+            funFact: "A single platelet lives only about 8 to 10 days, and the body replaces them by producing roughly 100 billion new platelets daily.",
             name: "Hemostasis & Coagulation",
             completed: false,
             simple: "Hemostasis is the body's process for stopping bleeding — first by plugging the injury with platelets, then reinforcing it with a fibrin clot.",
@@ -331,6 +344,7 @@ const SUBJECTS = [
           },
           {
             id: "blood-groups-transfusion",
+            funFact: "Type O-negative blood is called the 'universal donor' because it lacks A, B, and Rh(D) antigens, making it the safest choice in emergencies before blood type is known.",
             name: "Blood Groups & Transfusion",
             completed: false,
             simple: "Blood type depends on markers (antigens) on red blood cells, and mismatched transfusions can trigger a dangerous immune reaction.",
@@ -367,6 +381,7 @@ const SUBJECTS = [
         topics: [
           {
             id: "chemical-basis-of-life",
+            funFact: "The human body is about 60% water by weight, and nearly every biochemical reaction inside your cells happens dissolved in it.",
             name: "Chemical Basis of Life",
             completed: false,
             simple: "Living things are built from a small set of chemical building blocks — water, carbohydrates, lipids, proteins, and nucleic acids — organized into cells.",
@@ -386,6 +401,7 @@ const SUBJECTS = [
           },
           {
             id: "biochem-in-medicine",
+            funFact: "More than a quarter of all prescription drugs work by targeting a specific enzyme, either blocking or boosting one particular biochemical reaction.",
             name: "Biochemistry in Medicine",
             completed: false,
             simple: "Biochemistry underlies how diseases develop and how most drugs and lab tests work, making it a foundation for clinical medicine.",
@@ -410,6 +426,7 @@ const SUBJECTS = [
         topics: [
           {
             id: "glycolysis",
+            funFact: "Mature red blood cells have no mitochondria at all, so they rely entirely on glycolysis for energy — they can't run the Krebs cycle.",
             name: "Glycolysis",
             completed: false,
             simple: "Glycolysis is how cells break down glucose into a smaller molecule called pyruvate, releasing a small amount of usable energy.",
@@ -429,6 +446,7 @@ const SUBJECTS = [
           },
           {
             id: "krebs-cycle",
+            funFact: "The Krebs cycle is also called the citric acid cycle because its first step produces citrate — the same acid found in citrus fruit.",
             name: "Krebs Cycle (Citric Acid Cycle)",
             completed: false,
             simple: "The Krebs cycle is a loop of reactions in the mitochondria that extracts energy-carrying electrons from fuel molecules.",
@@ -453,6 +471,7 @@ const SUBJECTS = [
         topics: [
           {
             id: "urea-cycle",
+            funFact: "The urea your liver produces is the same compound manufactured industrially as an ingredient in some fertilizers and skin moisturizers.",
             name: "Urea Cycle",
             completed: false,
             simple: "The urea cycle converts toxic ammonia, produced from breaking down amino acids, into urea so it can be safely excreted.",
@@ -471,6 +490,7 @@ const SUBJECTS = [
           },
           {
             id: "amino-acid-degradation",
+            funFact: "Just 20 standard amino acids build every protein in the human body, yet their combinations can form virtually unlimited protein structures.",
             name: "Amino Acid Degradation",
             completed: false,
             simple: "When amino acids are broken down for energy, their nitrogen is removed first and their carbon backbones are funneled into other pathways.",
@@ -867,7 +887,40 @@ const QUIZZES = {
   ],
 };
 
+/* ---------------------------- MBBS Questions bank -------------------------- */
+/* Starter batch — grows over time via extraContent.js */
+const MBBS_QUESTIONS = {
+  anatomy: [
+    { q: "Which structure is the primary blood supply to the femoral head, at risk in femoral neck fractures?", options: ["Obturator artery", "Medial and lateral circumflex femoral arteries", "Superior gluteal artery", "Femoral vein"], correct: 1, explanation: "The retinacular branches of the medial and lateral circumflex femoral arteries supply the femoral head and are vulnerable in femoral neck fractures." },
+    { q: "The recurrent laryngeal nerve is a branch of which cranial nerve?", options: ["Cranial nerve IX", "Cranial nerve X (vagus)", "Cranial nerve XI", "Cranial nerve XII"], correct: 1, explanation: "The recurrent laryngeal nerve is a branch of the vagus nerve (CN X), supplying most laryngeal muscles." },
+    { q: "Which vertebral level typically marks the bifurcation of the abdominal aorta?", options: ["T12", "L1", "L4", "S1"], correct: 2, explanation: "The abdominal aorta typically bifurcates into the common iliac arteries at the L4 vertebral level." },
+    { q: "The inguinal canal transmits which structure in males?", options: ["Femoral nerve", "Spermatic cord", "Sciatic nerve", "Great saphenous vein"], correct: 1, explanation: "In males, the inguinal canal transmits the spermatic cord." },
+    { q: "Which muscle is the primary abductor of the arm beyond the first 15 degrees?", options: ["Supraspinatus", "Deltoid", "Infraspinatus", "Teres major"], correct: 1, explanation: "Supraspinatus initiates abduction; the deltoid takes over as the primary abductor beyond about 15 degrees." },
+    { q: "The phrenic nerve, which supplies the diaphragm, arises from which spinal levels?", options: ["C1-C2", "C3-C5", "T1-T4", "L1-L3"], correct: 1, explanation: "The phrenic nerve arises from C3, C4, and C5 — 'C3, 4, 5 keeps the diaphragm alive.'" },
+    { q: "Which structure separates the anterior and posterior chambers of the eye?", options: ["Cornea", "Iris", "Retina", "Sclera"], correct: 1, explanation: "The iris separates the anterior and posterior chambers of the eye, with the pupil at its center." },
+  ],
+  physiology: [
+    { q: "Which segment of the nephron is impermeable to water, contributing to dilution of urine?", options: ["Proximal tubule", "Descending loop of Henle", "Thick ascending loop of Henle", "Collecting duct"], correct: 2, explanation: "The thick ascending limb actively transports ions but is impermeable to water, diluting the tubular fluid." },
+    { q: "Which lung volume is measured as the amount of air moved in a normal, quiet breath?", options: ["Residual volume", "Tidal volume", "Vital capacity", "Inspiratory reserve volume"], correct: 1, explanation: "Tidal volume is the amount of air inhaled or exhaled during normal quiet breathing." },
+    { q: "Which hormone is released in response to low blood glucose to stimulate glycogen breakdown?", options: ["Insulin", "Glucagon", "Somatostatin", "Cortisol only"], correct: 1, explanation: "Glucagon is released by pancreatic alpha cells in response to hypoglycemia, promoting glycogenolysis." },
+    { q: "The Bohr effect describes how which factor shifts the oxygen-hemoglobin dissociation curve?", options: ["Temperature only", "A decrease in pH (increase in CO2/acidity)", "Increased oxygen concentration", "Altitude alone"], correct: 1, explanation: "A decrease in pH (more CO2/acid) shifts the curve right, promoting oxygen release to tissues — the Bohr effect." },
+    { q: "Which chamber of the heart generates the pacemaker signal that sets normal heart rate?", options: ["AV node", "SA node", "Bundle of His", "Purkinje fibers"], correct: 1, explanation: "The sinoatrial (SA) node in the right atrium is the heart's natural pacemaker." },
+    { q: "Which of the following best describes negative feedback in physiology?", options: [ "A response that amplifies the original stimulus", "A response that opposes and reduces the original stimulus", "A response with no relation to the stimulus", "A response only seen in disease states" ], correct: 1, explanation: "Negative feedback opposes a change, returning a variable toward its set point — the most common regulatory mechanism in physiology." },
+  ],
+  biochemistry: [
+    { q: "Which vitamin deficiency causes beriberi, affecting the nervous and cardiovascular systems?", options: ["Vitamin B1 (thiamine)", "Vitamin B12", "Vitamin C", "Vitamin D"], correct: 0, explanation: "Thiamine (B1) deficiency causes beriberi, impairing energy metabolism especially in nerve and cardiac tissue." },
+    { q: "Which enzyme deficiency causes classic galactosemia?", options: ["Lactase", "Galactose-1-phosphate uridyltransferase", "Glucose-6-phosphate dehydrogenase", "Fructokinase"], correct: 1, explanation: "Classic galactosemia results from a deficiency of galactose-1-phosphate uridyltransferase." },
+    { q: "DNA replication proceeds in which direction on the template strand?", options: ["5' to 3' only on the new strand", "3' to 5' on the new strand", "In both directions equally on both strands simultaneously", "Direction is random"], correct: 0, explanation: "DNA polymerase synthesizes the new strand in the 5' to 3' direction, reading the template 3' to 5'." },
+    { q: "Which lipoprotein is primarily responsible for transporting cholesterol from the liver to tissues?", options: ["HDL", "LDL", "Chylomicrons", "VLDL only"], correct: 1, explanation: "LDL ('bad cholesterol') carries cholesterol from the liver to peripheral tissues." },
+    { q: "Which amino acid is the precursor for serotonin synthesis?", options: ["Tyrosine", "Tryptophan", "Phenylalanine", "Glycine"], correct: 1, explanation: "Tryptophan is the precursor for serotonin (and later melatonin) synthesis." },
+    { q: "Beta-oxidation of fatty acids for energy takes place primarily in which organelle?", options: ["Cytoplasm", "Nucleus", "Mitochondria", "Golgi apparatus"], correct: 2, explanation: "Beta-oxidation of fatty acids occurs in the mitochondrial matrix, generating acetyl-CoA for the Krebs cycle." },
+  ],
+};
+
+/* ---------------------------- Past Questions storage ------------------------ */
+
 /* ------------------------------ Small UI bits --------------------------- */
+
 function Label({ children, color = MUTED }) {
   return (
     <p className="text-[10px] uppercase tracking-[0.16em]" style={{ color, fontFamily: MONO }}>
@@ -926,8 +979,8 @@ function PulseLine() {
 }
 
 /* -------------------------------- HOME ------------------------------------ */
-function HomeScreen({ onOpenSubject, onGoToStudy }) {
-  const studentName = "Daniel";
+function HomeScreen({ onOpenSubject, onGoToStudy, profile }) {
+  const studentName = profile.name || "Student";
   return (
     <div className="pb-28">
       <div className="px-5 pt-7 pb-5 border-b" style={{ borderColor: LINE }}>
@@ -941,7 +994,7 @@ function HomeScreen({ onOpenSubject, onGoToStudy }) {
             </h1>
           </div>
           <div className="w-11 h-11 rounded-sm flex items-center justify-center border-2 shrink-0" style={{ borderColor: INK, color: INK, fontFamily: SERIF, fontWeight: 600 }}>
-            D
+            {studentName.charAt(0).toUpperCase()}
           </div>
         </div>
       </div>
@@ -1301,6 +1354,16 @@ function TopicDetail({ topic, subject, onBack }) {
           </div>
         </section>
 
+        {topic.funFact && (
+          <section className="p-3.5 rounded-sm border" style={{ borderColor: LINE, background: "#FAF7EE" }}>
+            <div className="flex items-center gap-1.5 mb-1.5">
+              <Sparkles size={14} color="#8A7F63" />
+              <Label>Fun Fact</Label>
+            </div>
+            <p className="text-[12.5px] leading-relaxed italic" style={{ color: "#5B5340" }}>{topic.funFact}</p>
+          </section>
+        )}
+
         <AiTutorPanel topicName={topic.name} color={subject.color} tint={subject.tint} />
       </div>
     </div>
@@ -1308,15 +1371,52 @@ function TopicDetail({ topic, subject, onBack }) {
 }
 
 /* --------------------------------- QUIZ ------------------------------------ */
-function QuizSubjectList({ onStartQuiz }) {
+function QuizHome({ onSelectCategory }) {
+  const categories = [
+    { id: "mcq", title: "MCQ Practice", desc: "15 questions per subject, instant feedback", color: "#B8432E" },
+    { id: "mbbs", title: "MBBS Questions", desc: "Exam-style questions, growing over time", color: "#3B5B7A" },
+    { id: "past", title: "Past Questions", desc: "Paste questions from your school", color: "#5C7A52" },
+  ];
   return (
     <div className="px-5 pt-6 pb-28 space-y-4">
       <div>
         <h1 className="text-[24px] leading-tight" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>Quiz</h1>
-        <p className="text-[12.5px] mt-1" style={{ color: MUTED }}>Test yourself on a subject.</p>
+        <p className="text-[12.5px] mt-1" style={{ color: MUTED }}>Choose how you want to test yourself.</p>
+      </div>
+      {categories.map((c) => (
+        <button
+          key={c.id}
+          onClick={() => onSelectCategory(c.id)}
+          className="w-full text-left bg-white rounded-sm border overflow-hidden flex items-stretch"
+          style={{ borderColor: LINE }}
+        >
+          <div className="w-1.5 shrink-0" style={{ background: c.color }} />
+          <div className="flex-1 p-4 flex items-center justify-between">
+            <div>
+              <p className="text-[16px]" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>{c.title}</p>
+              <p className="text-[12px] mt-1" style={{ color: MUTED }}>{c.desc}</p>
+            </div>
+            <ChevronRight size={17} color="#B3A889" />
+          </div>
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function QuizSubjectList({ onStartQuiz, onBack, title, bank }) {
+  return (
+    <div className="px-5 pt-6 pb-28 space-y-4">
+      <button onClick={onBack} className="flex items-center gap-1" style={{ color: "#B8432E" }}>
+        <ChevronLeft size={16} />
+        <span className="text-[12px]" style={{ fontFamily: MONO }}>Quiz</span>
+      </button>
+      <div>
+        <h1 className="text-[24px] leading-tight" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>{title}</h1>
+        <p className="text-[12.5px] mt-1" style={{ color: MUTED }}>Pick a subject.</p>
       </div>
       {SUBJECTS.map((s) => {
-        const count = QUIZZES[s.id]?.length || 0;
+        const count = bank[s.id]?.length || 0;
         return (
           <div key={s.id} className="bg-white rounded-sm border overflow-hidden" style={{ borderColor: LINE }}>
             <div className="flex items-stretch">
@@ -1333,11 +1433,12 @@ function QuizSubjectList({ onStartQuiz }) {
                 </div>
                 <button
                   onClick={() => onStartQuiz(s)}
+                  disabled={count === 0}
                   className="mt-3 w-full py-2.5 rounded-sm text-[12.5px] font-medium flex items-center justify-center gap-1.5"
-                  style={{ background: s.color, color: "#FFF" }}
+                  style={{ background: count === 0 ? "#D9D0BC" : s.color, color: "#FFF" }}
                 >
-                  Start Quiz
-                  <ChevronRight size={14} />
+                  {count === 0 ? "No questions yet" : "Start Quiz"}
+                  {count > 0 && <ChevronRight size={14} />}
                 </button>
               </div>
             </div>
@@ -1348,8 +1449,99 @@ function QuizSubjectList({ onStartQuiz }) {
   );
 }
 
-function QuizPlay({ subject, onBack, onFinish }) {
-  const questions = QUIZZES[subject.id] || [];
+function PastQuestions({ onBack, entries, onAddEntry }) {
+  const [subjectId, setSubjectId] = useState(SUBJECTS[0].id);
+  const [school, setSchool] = useState("");
+  const [text, setText] = useState("");
+
+  function submit() {
+    if (!school.trim() || !text.trim()) return;
+    onAddEntry({ id: Date.now(), subjectId, school: school.trim(), text: text.trim() });
+    setSchool("");
+    setText("");
+  }
+
+  const filtered = entries.filter((e) => e.subjectId === subjectId);
+  const subject = SUBJECTS.find((s) => s.id === subjectId);
+
+  return (
+    <div className="px-5 pt-6 pb-28">
+      <button onClick={onBack} className="flex items-center gap-1 mb-4" style={{ color: "#B8432E" }}>
+        <ChevronLeft size={16} />
+        <span className="text-[12px]" style={{ fontFamily: MONO }}>Quiz</span>
+      </button>
+      <h1 className="text-[22px] mb-1" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>Past Questions</h1>
+      <p className="text-[12.5px] mb-4" style={{ color: MUTED }}>Paste past questions from your school, organized by subject.</p>
+
+      <div className="flex gap-2 mb-4">
+        {SUBJECTS.map((s) => (
+          <button
+            key={s.id}
+            onClick={() => setSubjectId(s.id)}
+            className="flex-1 py-2 rounded-sm text-[11px] border"
+            style={{
+              background: subjectId === s.id ? s.color : "#FFFFFF",
+              color: subjectId === s.id ? "#FFFFFF" : INK,
+              borderColor: subjectId === s.id ? s.color : LINE,
+              fontFamily: MONO,
+            }}
+          >
+            {s.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="p-4 rounded-sm bg-white border space-y-3" style={{ borderColor: LINE }}>
+        <div>
+          <Label>School Name</Label>
+          <input
+            value={school}
+            onChange={(e) => setSchool(e.target.value)}
+            placeholder="e.g. University of Lagos"
+            className="mt-1.5 w-full px-3.5 py-2.5 rounded-sm border bg-white text-[13.5px]"
+            style={{ color: INK, borderColor: LINE }}
+          />
+        </div>
+        <div>
+          <Label>Paste Questions</Label>
+          <textarea
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder="Paste past exam questions here..."
+            rows={5}
+            className="mt-1.5 w-full px-3.5 py-2.5 rounded-sm border bg-white text-[13px] leading-relaxed"
+            style={{ color: INK, borderColor: LINE }}
+          />
+        </div>
+        <button
+          onClick={submit}
+          className="w-full py-2.5 rounded-sm text-[13px] font-medium"
+          style={{ background: subject.color, color: "#FFF" }}
+        >
+          Save
+        </button>
+      </div>
+
+      <div className="mt-5 space-y-3">
+        <Label>{subject.name} — Saved ({filtered.length})</Label>
+        {filtered.length === 0 && (
+          <p className="text-[12.5px] py-4 text-center" style={{ color: MUTED }}>Nothing saved yet for {subject.name}.</p>
+        )}
+        {filtered.map((e) => (
+          <div key={e.id} className="p-3.5 rounded-sm bg-white border" style={{ borderColor: LINE }}>
+            <p className="text-[12px] mb-1.5" style={{ color: subject.color, fontFamily: MONO }}>{e.school}</p>
+            <p className="text-[13px] leading-relaxed whitespace-pre-wrap" style={{ color: INK }}>{e.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+
+
+function QuizPlay({ subject, onBack, onFinish, bank }) {
+  const questions = bank[subject.id] || [];
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState(null);
   const [revealed, setRevealed] = useState(false);
@@ -1506,6 +1698,86 @@ function QuizResults({ subject, score, total, onRetry, onBack }) {
   );
 }
 
+/* ------------------------------- CALENDAR ----------------------------------- */
+const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+function StudyCalendar() {
+  const now = new Date();
+  const defaultYear = now.getFullYear() >= 2026 && now.getFullYear() <= 2035 ? now.getFullYear() : 2026;
+  const [year, setYear] = useState(defaultYear);
+  const [month, setMonth] = useState(now.getMonth());
+
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const cells = [...Array(firstDay).fill(null), ...Array.from({ length: daysInMonth }, (_, i) => i + 1)];
+
+  const isToday = (day) =>
+    day === now.getDate() && month === now.getMonth() && year === now.getFullYear();
+
+  function prevMonth() {
+    if (month === 0) {
+      if (year > 2026) { setYear(year - 1); setMonth(11); }
+    } else {
+      setMonth(month - 1);
+    }
+  }
+
+  function nextMonth() {
+    if (month === 11) {
+      if (year < 2035) { setYear(year + 1); setMonth(0); }
+    } else {
+      setMonth(month + 1);
+    }
+  }
+
+  return (
+    <section className="p-4 rounded-sm bg-white border" style={{ borderColor: LINE }}>
+      <div className="flex items-center justify-between mb-1">
+        <Label>Study Calendar</Label>
+        <div className="flex items-center gap-2">
+          <button onClick={prevMonth} className="p-1"><ChevronLeft size={15} color={MUTED} /></button>
+          <select
+            value={year}
+            onChange={(e) => setYear(Number(e.target.value))}
+            className="text-[11px] bg-transparent outline-none"
+            style={{ color: INK, fontFamily: MONO }}
+          >
+            {Array.from({ length: 10 }, (_, i) => 2026 + i).map((y) => (
+              <option key={y} value={y}>{y}</option>
+            ))}
+          </select>
+          <button onClick={nextMonth} className="p-1"><ChevronRight size={15} color={MUTED} /></button>
+        </div>
+      </div>
+
+      <p className="text-[15px] mt-2 mb-3" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>
+        {MONTH_NAMES[month]} {year}
+      </p>
+
+      <div className="grid grid-cols-7 gap-1 mb-1">
+        {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
+          <div key={i} className="text-center text-[9.5px]" style={{ color: MUTED, fontFamily: MONO }}>{d}</div>
+        ))}
+      </div>
+      <div className="grid grid-cols-7 gap-1">
+        {cells.map((day, i) => (
+          <div
+            key={i}
+            className="aspect-square flex items-center justify-center rounded-sm text-[11.5px]"
+            style={{
+              background: day && isToday(day) ? "#B8432E" : "transparent",
+              color: day && isToday(day) ? "#FFFFFF" : day ? INK : "transparent",
+              fontFamily: MONO,
+            }}
+          >
+            {day || ""}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 /* ------------------------------- PROGRESS ---------------------------------- */
 function ProgressScreen({ onOpenSubject }) {
   const overall = Math.round(SUBJECTS.reduce((sum, s) => sum + s.progress, 0) / SUBJECTS.length);
@@ -1564,188 +1836,4 @@ function ProgressScreen({ onOpenSubject }) {
         <div className="p-4 rounded-sm bg-white border" style={{ borderColor: LINE }}>
           <div className="flex items-center gap-1.5">
             <Flame size={12} color="#B8432E" />
-            <Label>Current Streak</Label>
-          </div>
-          <p className="text-[26px] mt-2 leading-none" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>
-            12<span className="text-[13px] font-normal ml-1" style={{ color: MUTED }}>days</span>
-          </p>
-        </div>
-        <div className="p-4 rounded-sm bg-white border" style={{ borderColor: LINE }}>
-          <Label>Best Streak</Label>
-          <p className="text-[26px] mt-2 leading-none" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>
-            18<span className="text-[13px] font-normal ml-1" style={{ color: MUTED }}>days</span>
-          </p>
-        </div>
-      </section>
-
-      <section className="p-4 rounded-sm bg-white border" style={{ borderColor: LINE }}>
-        <Label>This Week</Label>
-        <div className="mt-1"><PulseLine /></div>
-        <div className="flex justify-between px-1">
-          {STREAK_DAYS.map((d, i) => (
-            <span key={i} className="text-[10px]" style={{ color: STREAK[i] ? INK : "#C3B99B", fontFamily: MONO }}>{d}</span>
-          ))}
-        </div>
-      </section>
-    </div>
-  );
-}
-
-/* -------------------------------- PROFILE ----------------------------------- */
-function ProfileRow({ label, sub }) {
-  return (
-    <button className="w-full flex items-center justify-between px-4 py-3.5 bg-white border-b last:border-b-0" style={{ borderColor: LINE }}>
-      <div className="text-left">
-        <p className="text-[13.5px]" style={{ color: INK }}>{label}</p>
-        {sub && <p className="text-[11px] mt-0.5" style={{ color: MUTED, fontFamily: MONO }}>{sub}</p>}
-      </div>
-      <ChevronRight size={15} color="#B3A889" />
-    </button>
-  );
-}
-
-function ProfileScreen() {
-  const totalTopics = SUBJECTS.reduce((sum, s) => sum + s.chapters.reduce((c, ch) => c + ch.topics.length, 0), 0);
-  const completedTopics = SUBJECTS.reduce(
-    (sum, s) => sum + s.chapters.reduce((c, ch) => c + ch.topics.filter((t) => t.completed).length, 0),
-    0
-  );
-
-  return (
-    <div className="pb-28">
-      <div className="px-5 pt-7 pb-6 border-b flex flex-col items-center text-center" style={{ borderColor: LINE }}>
-        <div
-          className="w-16 h-16 rounded-full flex items-center justify-center border-2 mb-3"
-          style={{ borderColor: INK, color: INK, fontFamily: SERIF, fontWeight: 600, fontSize: 24 }}
-        >
-          D
-        </div>
-        <h1 className="text-[20px]" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>Daniel</h1>
-        <p className="text-[11.5px] mt-1" style={{ color: MUTED, fontFamily: MONO }}>Year 2 · Medical Student</p>
-      </div>
-
-      <div className="px-5 mt-5">
-        <div className="grid grid-cols-3 gap-2.5">
-          <div className="p-3 rounded-sm bg-white border text-center" style={{ borderColor: LINE }}>
-            <p className="text-[20px]" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>{completedTopics}/{totalTopics}</p>
-            <p className="text-[9.5px] mt-1 uppercase tracking-wide" style={{ color: MUTED, fontFamily: MONO }}>Topics</p>
-          </div>
-          <div className="p-3 rounded-sm bg-white border text-center" style={{ borderColor: LINE }}>
-            <p className="text-[20px]" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>12</p>
-            <p className="text-[9.5px] mt-1 uppercase tracking-wide" style={{ color: MUTED, fontFamily: MONO }}>Streak</p>
-          </div>
-          <div className="p-3 rounded-sm bg-white border text-center" style={{ borderColor: LINE }}>
-            <p className="text-[20px]" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>3</p>
-            <p className="text-[9.5px] mt-1 uppercase tracking-wide" style={{ color: MUTED, fontFamily: MONO }}>Subjects</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="px-5 mt-6">
-        <Label>Account</Label>
-        <div className="mt-2 rounded-sm border overflow-hidden" style={{ borderColor: LINE }}>
-          <ProfileRow label="Edit Profile" />
-          <ProfileRow label="Notifications" />
-          <ProfileRow label="Study Reminders" sub="Daily at 7:00 PM" />
-        </div>
-      </div>
-
-      <div className="px-5 mt-5">
-        <Label>Support</Label>
-        <div className="mt-2 rounded-sm border overflow-hidden" style={{ borderColor: LINE }}>
-          <ProfileRow label="Help & Support" />
-          <ProfileRow label="About MedSphere" />
-        </div>
-      </div>
-
-      <div className="px-5 mt-6">
-        <button className="w-full py-3 rounded-sm text-[13px] font-medium border" style={{ borderColor: "#B8432E", color: "#B8432E" }}>
-          Log Out
-        </button>
-      </div>
-    </div>
-  );
-}
-
-/* ------------------------------- Placeholder tab --------------------------- */
-function PlaceholderTab({ name }) {
-  return (
-    <div className="px-5 pt-24 pb-28 text-center">
-      <p className="text-[13px]" style={{ color: MUTED, fontFamily: MONO }}>
-        The {name} tab hasn't been built yet — Home and Study are ready.
-      </p>
-    </div>
-  );
-}
-
-/* --------------------------------- ROOT APP -------------------------------- */
-export default function MedSphereApp() {
-  const [activeTab, setActiveTab] = useState("home");
-  const [subject, setSubject] = useState(null);
-  const [topic, setTopic] = useState(null);
-
-  const [quizSubject, setQuizSubject] = useState(null);
-  const [quizStage, setQuizStage] = useState("list");
-  const [quizResult, setQuizResult] = useState({ score: 0, total: 0 });
-  const [quizKey, setQuizKey] = useState(0);
-
-  const goToStudyTab = () => { setActiveTab("study"); setSubject(null); setTopic(null); };
-  const openSubjectFromAnywhere = (s) => { setActiveTab("study"); setSubject(s); setTopic(null); };
-  const openTopic = (t) => setTopic(t);
-  const backToSubjects = () => { setSubject(null); setTopic(null); };
-  const backToChapters = () => setTopic(null);
-
-  const startQuiz = (s) => { setQuizSubject(s); setQuizStage("play"); setQuizKey((k) => k + 1); };
-  const finishQuiz = (_unused, total, score) => { setQuizResult({ score, total }); setQuizStage("results"); };
-  const retryQuiz = () => { setQuizStage("play"); setQuizKey((k) => k + 1); };
-  const backToQuizList = () => { setQuizStage("list"); setQuizSubject(null); };
-
-  const changeTab = (tab) => {
-    setActiveTab(tab);
-    if (tab !== "study") { setSubject(null); setTopic(null); }
-    if (tab !== "quiz") { setQuizStage("list"); setQuizSubject(null); }
-  };
-
-  let content;
-  if (activeTab === "home") {
-    content = <HomeScreen onOpenSubject={openSubjectFromAnywhere} onGoToStudy={goToStudyTab} />;
-  } else if (activeTab === "study") {
-    content = topic ? (
-      <TopicDetail topic={topic} subject={subject} onBack={backToChapters} />
-    ) : subject ? (
-      <SubjectDetail subject={subject} onBack={backToSubjects} onOpenTopic={openTopic} />
-    ) : (
-      <SubjectList onOpenSubject={(s) => { setSubject(s); setTopic(null); }} />
-    );
-  } else if (activeTab === "quiz") {
-    content =
-      quizStage === "play" ? (
-        <QuizPlay key={quizKey} subject={quizSubject} onBack={backToQuizList} onFinish={finishQuiz} />
-      ) : quizStage === "results" ? (
-        <QuizResults subject={quizSubject} score={quizResult.score} total={quizResult.total} onRetry={retryQuiz} onBack={backToQuizList} />
-      ) : (
-        <QuizSubjectList onStartQuiz={startQuiz} />
-      );
-  } else if (activeTab === "progress") {
-    content = <ProgressScreen onOpenSubject={openSubjectFromAnywhere} />;
-  } else if (activeTab === "profile") {
-    content = <ProfileScreen />;
-  } else {
-    content = <PlaceholderTab name={activeTab[0].toUpperCase() + activeTab.slice(1)} />;
-  }
-
-  return (
-    <div className="min-h-screen w-full flex justify-center" style={{ background: "#EDE7D6" }}>
-      <div className="w-full max-w-sm min-h-screen relative" style={{ background: PARCH, fontFamily: "'Inter', ui-sans-serif, system-ui" }}>
-        {content}
-        <div className="fixed bottom-0 w-full max-w-sm flex items-center justify-around py-3 border-t" style={{ background: PARCH, borderColor: LINE }}>
-          <NavItem icon={Home} label="Home" active={activeTab === "home"} onClick={() => changeTab("home")} />
-          <NavItem icon={BookOpen} label="Study" active={activeTab === "study"} onClick={() => changeTab("study")} />
-          <NavItem icon={ListChecks} label="Quiz" active={activeTab === "quiz"} onClick={() => changeTab("quiz")} />
-          <NavItem icon={LineChart} label="Progress" active={activeTab === "progress"} onClick={() => changeTab("progress")} />
-          <NavItem icon={User} label="Profile" active={activeTab === "profile"} onClick={() => changeTab("profile")} />
-        </div>
-      </div>
-    </div>
-  );
-}
+            <Label>Cu
