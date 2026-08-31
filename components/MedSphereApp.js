@@ -1836,4 +1836,338 @@ function ProgressScreen({ onOpenSubject }) {
         <div className="p-4 rounded-sm bg-white border" style={{ borderColor: LINE }}>
           <div className="flex items-center gap-1.5">
             <Flame size={12} color="#B8432E" />
-            <Label>Cu
+            <Label>Current Streak</Label>
+          </div>
+          <p className="text-[26px] mt-2 leading-none" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>
+            12<span className="text-[13px] font-normal ml-1" style={{ color: MUTED }}>days</span>
+          </p>
+        </div>
+        <div className="p-4 rounded-sm bg-white border" style={{ borderColor: LINE }}>
+          <Label>Best Streak</Label>
+          <p className="text-[26px] mt-2 leading-none" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>
+            18<span className="text-[13px] font-normal ml-1" style={{ color: MUTED }}>days</span>
+          </p>
+        </div>
+      </section>
+
+      <section className="p-4 rounded-sm bg-white border" style={{ borderColor: LINE }}>
+        <Label>This Week</Label>
+        <div className="mt-1"><PulseLine /></div>
+        <div className="flex justify-between px-1">
+          {STREAK_DAYS.map((d, i) => (
+            <span key={i} className="text-[10px]" style={{ color: STREAK[i] ? INK : "#C3B99B", fontFamily: MONO }}>{d}</span>
+          ))}
+        </div>
+      </section>
+
+      <StudyCalendar />
+    </div>
+  );
+}
+
+/* -------------------------------- PROFILE ----------------------------------- */
+function ProfileRow({ label, sub, onClick }) {
+  return (
+    <button onClick={onClick} className="w-full flex items-center justify-between px-4 py-3.5 bg-white border-b last:border-b-0" style={{ borderColor: LINE }}>
+      <div className="text-left">
+        <p className="text-[13.5px]" style={{ color: INK }}>{label}</p>
+        {sub && <p className="text-[11px] mt-0.5" style={{ color: MUTED, fontFamily: MONO }}>{sub}</p>}
+      </div>
+      <ChevronRight size={15} color="#B3A889" />
+    </button>
+  );
+}
+
+function ToggleRow({ label, sub, value, onToggle }) {
+  return (
+    <div className="w-full flex items-center justify-between px-4 py-3.5 bg-white border-b last:border-b-0" style={{ borderColor: LINE }}>
+      <div className="text-left">
+        <p className="text-[13.5px]" style={{ color: INK }}>{label}</p>
+        {sub && <p className="text-[11px] mt-0.5" style={{ color: MUTED, fontFamily: MONO }}>{sub}</p>}
+      </div>
+      <button
+        onClick={onToggle}
+        className="w-11 h-6 rounded-full relative shrink-0 transition-colors"
+        style={{ background: value ? "#5C7A52" : "#D9D0BC" }}
+      >
+        <span
+          className="absolute top-0.5 w-5 h-5 rounded-full bg-white transition-all"
+          style={{ left: value ? 22 : 2 }}
+        />
+      </button>
+    </div>
+  );
+}
+
+function EditProfileForm({ profile, onSave, onCancel }) {
+  const [form, setForm] = useState(profile);
+  const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
+
+  const inputStyle = {
+    color: INK,
+    fontFamily: "inherit",
+    borderColor: LINE,
+  };
+
+  return (
+    <div className="px-5 pt-6 pb-28">
+      <button onClick={onCancel} className="flex items-center gap-1 mb-4" style={{ color: "#B8432E" }}>
+        <ChevronLeft size={16} />
+        <span className="text-[12px]" style={{ fontFamily: MONO }}>Cancel</span>
+      </button>
+      <h1 className="text-[22px] mb-5" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>Edit Profile</h1>
+
+      <div className="space-y-4">
+        <div>
+          <Label>Name</Label>
+          <input
+            value={form.name}
+            onChange={set("name")}
+            placeholder="Your name"
+            className="mt-1.5 w-full px-3.5 py-3 rounded-sm border bg-white text-[14px]"
+            style={inputStyle}
+          />
+        </div>
+        <div>
+          <Label>Title</Label>
+          <div className="mt-1.5 flex gap-2">
+            {["Student", "Doctor"].map((t) => (
+              <button
+                key={t}
+                onClick={() => setForm((f) => ({ ...f, title: t }))}
+                className="flex-1 py-2.5 rounded-sm text-[13px] border"
+                style={{
+                  background: form.title === t ? "#B8432E" : "#FFFFFF",
+                  color: form.title === t ? "#FFFFFF" : INK,
+                  borderColor: form.title === t ? "#B8432E" : LINE,
+                }}
+              >
+                {t}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div>
+          <Label>Course</Label>
+          <input
+            value={form.course}
+            onChange={set("course")}
+            placeholder="e.g. MBBS"
+            className="mt-1.5 w-full px-3.5 py-3 rounded-sm border bg-white text-[14px]"
+            style={inputStyle}
+          />
+        </div>
+        <div>
+          <Label>Year in School</Label>
+          <input
+            value={form.year}
+            onChange={set("year")}
+            placeholder="e.g. Year 2"
+            className="mt-1.5 w-full px-3.5 py-3 rounded-sm border bg-white text-[14px]"
+            style={inputStyle}
+          />
+        </div>
+        <div>
+          <Label>Email</Label>
+          <input
+            value={form.email}
+            onChange={set("email")}
+            placeholder="you@example.com"
+            className="mt-1.5 w-full px-3.5 py-3 rounded-sm border bg-white text-[14px]"
+            style={inputStyle}
+          />
+        </div>
+      </div>
+
+      <button
+        onClick={() => onSave(form)}
+        className="mt-6 w-full py-3 rounded-sm text-[13px] font-medium"
+        style={{ background: "#1C2B39", color: "#FFF" }}
+      >
+        Save Changes
+      </button>
+    </div>
+  );
+}
+
+function ProfileScreen({ profile, onSaveProfile }) {
+  const [editing, setEditing] = useState(false);
+  const [notifs, setNotifs] = useState(true);
+  const [reminders, setReminders] = useState(true);
+
+  const totalTopics = SUBJECTS.reduce((sum, s) => sum + s.chapters.reduce((c, ch) => c + ch.topics.length, 0), 0);
+  const completedTopics = SUBJECTS.reduce(
+    (sum, s) => sum + s.chapters.reduce((c, ch) => c + ch.topics.filter((t) => t.completed).length, 0),
+    0
+  );
+
+  const displayName = profile.name || "Student";
+  const greetingLabel = profile.title === "Doctor" ? `Dr. ${displayName}` : displayName;
+
+  if (editing) {
+    return (
+      <EditProfileForm
+        profile={profile}
+        onCancel={() => setEditing(false)}
+        onSave={(updated) => { onSaveProfile(updated); setEditing(false); }}
+      />
+    );
+  }
+
+  return (
+    <div className="pb-28">
+      <div className="px-5 pt-7 pb-6 border-b flex flex-col items-center text-center" style={{ borderColor: LINE }}>
+        <div
+          className="w-16 h-16 rounded-full flex items-center justify-center border-2 mb-3"
+          style={{ borderColor: INK, color: INK, fontFamily: SERIF, fontWeight: 600, fontSize: 24 }}
+        >
+          {displayName.charAt(0).toUpperCase()}
+        </div>
+        <h1 className="text-[20px]" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>{greetingLabel}</h1>
+        <p className="text-[11.5px] mt-1" style={{ color: MUTED, fontFamily: MONO }}>
+          {profile.year || "Year —"} · {profile.course || "Course not set"}
+        </p>
+        {profile.email && (
+          <p className="text-[11px] mt-0.5" style={{ color: MUTED, fontFamily: MONO }}>{profile.email}</p>
+        )}
+      </div>
+
+      <div className="px-5 mt-5">
+        <div className="grid grid-cols-3 gap-2.5">
+          <div className="p-3 rounded-sm bg-white border text-center" style={{ borderColor: LINE }}>
+            <p className="text-[20px]" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>{completedTopics}/{totalTopics}</p>
+            <p className="text-[9.5px] mt-1 uppercase tracking-wide" style={{ color: MUTED, fontFamily: MONO }}>Topics</p>
+          </div>
+          <div className="p-3 rounded-sm bg-white border text-center" style={{ borderColor: LINE }}>
+            <p className="text-[20px]" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>12</p>
+            <p className="text-[9.5px] mt-1 uppercase tracking-wide" style={{ color: MUTED, fontFamily: MONO }}>Streak</p>
+          </div>
+          <div className="p-3 rounded-sm bg-white border text-center" style={{ borderColor: LINE }}>
+            <p className="text-[20px]" style={{ color: INK, fontFamily: SERIF, fontWeight: 600 }}>3</p>
+            <p className="text-[9.5px] mt-1 uppercase tracking-wide" style={{ color: MUTED, fontFamily: MONO }}>Subjects</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="px-5 mt-6">
+        <Label>Account</Label>
+        <div className="mt-2 rounded-sm border overflow-hidden" style={{ borderColor: LINE }}>
+          <ProfileRow label="Edit Profile" sub="Name, title, course, year, email" onClick={() => setEditing(true)} />
+          <ToggleRow label="Notifications" value={notifs} onToggle={() => setNotifs((v) => !v)} />
+          <ToggleRow label="Study Reminders" sub="Daily at 7:00 PM" value={reminders} onToggle={() => setReminders((v) => !v)} />
+        </div>
+      </div>
+
+      <div className="px-5 mt-5">
+        <Label>Support</Label>
+        <div className="mt-2 rounded-sm border overflow-hidden" style={{ borderColor: LINE }}>
+          <ProfileRow label="Help & Support" />
+          <ProfileRow label="About MedSphere" />
+        </div>
+      </div>
+
+      <div className="px-5 mt-6">
+        <button className="w-full py-3 rounded-sm text-[13px] font-medium border" style={{ borderColor: "#B8432E", color: "#B8432E" }}>
+          Log Out
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ------------------------------- Placeholder tab --------------------------- */
+function PlaceholderTab({ name }) {
+  return (
+    <div className="px-5 pt-24 pb-28 text-center">
+      <p className="text-[13px]" style={{ color: MUTED, fontFamily: MONO }}>
+        The {name} tab hasn't been built yet — Home and Study are ready.
+      </p>
+    </div>
+  );
+}
+
+/* --------------------------------- ROOT APP -------------------------------- */
+export default function MedSphereApp() {
+  const [activeTab, setActiveTab] = useState("home");
+  const [subject, setSubject] = useState(null);
+  const [topic, setTopic] = useState(null);
+
+  const [profile, setProfile] = useState({ name: "Daniel", title: "Student", course: "MBBS", year: "Year 2", email: "" });
+
+  const [quizCategory, setQuizCategory] = useState(null);
+  const [quizSubject, setQuizSubject] = useState(null);
+  const [quizStage, setQuizStage] = useState("list");
+  const [quizResult, setQuizResult] = useState({ score: 0, total: 0 });
+  const [quizKey, setQuizKey] = useState(0);
+  const [pastEntries, setPastEntries] = useState([]);
+
+  const goToStudyTab = () => { setActiveTab("study"); setSubject(null); setTopic(null); };
+  const openSubjectFromAnywhere = (s) => { setActiveTab("study"); setSubject(s); setTopic(null); };
+  const openTopic = (t) => setTopic(t);
+  const backToSubjects = () => { setSubject(null); setTopic(null); };
+  const backToChapters = () => setTopic(null);
+
+  const quizBank = quizCategory === "mbbs" ? MBBS_QUESTIONS : QUIZZES;
+  const quizTitle = quizCategory === "mbbs" ? "MBBS Questions" : "MCQ Practice";
+
+  const startQuiz = (s) => { setQuizSubject(s); setQuizStage("play"); setQuizKey((k) => k + 1); };
+  const finishQuiz = (_unused, total, score) => { setQuizResult({ score, total }); setQuizStage("results"); };
+  const retryQuiz = () => { setQuizStage("play"); setQuizKey((k) => k + 1); };
+  const backToQuizList = () => { setQuizStage("list"); setQuizSubject(null); };
+  const backToQuizHome = () => { setQuizCategory(null); setQuizStage("list"); setQuizSubject(null); };
+
+  const changeTab = (tab) => {
+    setActiveTab(tab);
+    if (tab !== "study") { setSubject(null); setTopic(null); }
+    if (tab !== "quiz") { setQuizCategory(null); setQuizStage("list"); setQuizSubject(null); }
+  };
+
+  let content;
+  if (activeTab === "home") {
+    content = <HomeScreen onOpenSubject={openSubjectFromAnywhere} onGoToStudy={goToStudyTab} profile={profile} />;
+  } else if (activeTab === "study") {
+    content = topic ? (
+      <TopicDetail topic={topic} subject={subject} onBack={backToChapters} />
+    ) : subject ? (
+      <SubjectDetail subject={subject} onBack={backToSubjects} onOpenTopic={openTopic} />
+    ) : (
+      <SubjectList onOpenSubject={(s) => { setSubject(s); setTopic(null); }} />
+    );
+  } else if (activeTab === "quiz") {
+    if (!quizCategory) {
+      content = <QuizHome onSelectCategory={(c) => setQuizCategory(c)} />;
+    } else if (quizCategory === "past") {
+      content = <PastQuestions onBack={backToQuizHome} entries={pastEntries} onAddEntry={(e) => setPastEntries((p) => [e, ...p])} />;
+    } else {
+      content =
+        quizStage === "play" ? (
+          <QuizPlay key={quizKey} subject={quizSubject} onBack={backToQuizList} onFinish={finishQuiz} bank={quizBank} />
+        ) : quizStage === "results" ? (
+          <QuizResults subject={quizSubject} score={quizResult.score} total={quizResult.total} onRetry={retryQuiz} onBack={backToQuizList} />
+        ) : (
+          <QuizSubjectList onStartQuiz={startQuiz} onBack={backToQuizHome} title={quizTitle} bank={quizBank} />
+        );
+    }
+  } else if (activeTab === "progress") {
+    content = <ProgressScreen onOpenSubject={openSubjectFromAnywhere} />;
+  } else if (activeTab === "profile") {
+    content = <ProfileScreen profile={profile} onSaveProfile={setProfile} />;
+  } else {
+    content = <PlaceholderTab name={activeTab[0].toUpperCase() + activeTab.slice(1)} />;
+  }
+
+  return (
+    <div className="min-h-screen w-full flex justify-center" style={{ background: "#EDE7D6" }}>
+      <div className="w-full max-w-sm min-h-screen relative" style={{ background: PARCH, fontFamily: "'Inter', ui-sans-serif, system-ui" }}>
+        {content}
+        <div className="fixed bottom-0 w-full max-w-sm flex items-center justify-around py-3 border-t" style={{ background: PARCH, borderColor: LINE }}>
+          <NavItem icon={Home} label="Home" active={activeTab === "home"} onClick={() => changeTab("home")} />
+          <NavItem icon={BookOpen} label="Study" active={activeTab === "study"} onClick={() => changeTab("study")} />
+          <NavItem icon={ListChecks} label="Quiz" active={activeTab === "quiz"} onClick={() => changeTab("quiz")} />
+          <NavItem icon={LineChart} label="Progress" active={activeTab === "progress"} onClick={() => changeTab("progress")} />
+          <NavItem icon={User} label="Profile" active={activeTab === "profile"} onClick={() => changeTab("profile")} />
+        </div>
+      </div>
+    </div>
+  );
+}
